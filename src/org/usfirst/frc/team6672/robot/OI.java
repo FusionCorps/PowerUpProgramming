@@ -84,15 +84,15 @@ public class OI {
 	}
 	
 	public OI(){
-//		autoGearOpen = new AutoGearOpen();
-//		autoGearClose = new AutoGearClose();
-//		manualGearOpen = new ManualGearOpen();
-//		manualGearClose = new ManualGearClose();
-//		
-//		autoGearOpen.whenActive(new OpenGearHolderOnce());
-//		autoGearClose.whenActive(new CloseGearHolderOnce());
-//		manualGearOpen.whileActive(new OpenGearHolderContinued());
-//		manualGearClose.whileActive(new CloseGearHolderContinued());
+		autoGearOpen = new AutoGearOpen();
+		autoGearClose = new AutoGearClose();
+		manualGearOpen = new ManualGearOpen();
+		manualGearClose = new ManualGearClose();
+		
+		autoGearOpen.whenActive(new OpenGearHolderOnce());
+		autoGearClose.whenActive(new CloseGearHolderOnce());
+		manualGearOpen.whileActive(new OpenGearHolderContinued());
+		manualGearClose.whileActive(new CloseGearHolderContinued());
 		button3.whenPressed(new SetRotateSpeed(0.6));
 		button2.whenPressed(new SetRotateSpeed(0.7));
 		button1.whenPressed(new SetRotateSpeed(1.0));

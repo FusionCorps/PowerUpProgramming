@@ -11,7 +11,7 @@ public class CloseGearHolderOnce extends CommandBase {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(gearHolder);
-    	setTimeout(1.5);
+    	setTimeout(1.2);
     }
 
     // Called just before this Command runs the first time

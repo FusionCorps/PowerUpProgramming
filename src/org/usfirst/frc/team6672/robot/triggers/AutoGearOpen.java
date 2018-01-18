@@ -10,6 +10,9 @@ import edu.wpi.first.wpilibj.buttons.Trigger;
 public class AutoGearOpen extends Trigger {
 
     public boolean get() {
+    	if (CommandBase.oi == null) {
+    		return false;
+    	}
         return CommandBase.oi.autoGearOpenPressed();
     }
 }
