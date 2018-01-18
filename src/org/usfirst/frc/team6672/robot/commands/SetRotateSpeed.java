@@ -4,16 +4,19 @@ package org.usfirst.frc.team6672.robot.commands;
 /**
  *
  */
-public class RotateSpeed10 extends CommandBase {
+public class SetRotateSpeed extends CommandBase {
 
-    public RotateSpeed10() {
+	double rotateSpeed = 0.7;
+	
+    public SetRotateSpeed(double speed) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	rotateSpeed = speed;
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	driveMechanism.setRotateSpeed(1);
+    	driveMechanism.setRotateSpeed(rotateSpeed);
     }
 
     // Called repeatedly when this Command is scheduled to run

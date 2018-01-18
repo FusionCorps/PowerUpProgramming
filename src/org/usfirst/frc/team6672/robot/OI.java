@@ -93,12 +93,12 @@ public class OI {
 //		autoGearClose.whenActive(new CloseGearHolderOnce());
 //		manualGearOpen.whileActive(new OpenGearHolderContinued());
 //		manualGearClose.whileActive(new CloseGearHolderContinued());
-		button3.whenPressed(new RotateSpeed6());
-		button2.whenPressed(new RotateSpeed7());
-		button1.whenPressed(new RotateSpeed10());
+		button3.whenPressed(new SetRotateSpeed(0.6));
+		button2.whenPressed(new SetRotateSpeed(0.7));
+		button1.whenPressed(new SetRotateSpeed(1.0));
 		button4.whileHeld(new TurnRopeClimber());
-		button5.whenPressed(new DriveSpeed8());
-		button6.whenPressed(new DriveSpeed10());
+		button5.whenPressed(new SetDriveSpeed(0.8));
+		button6.whenPressed(new SetDriveSpeed(1.0));
 		
 	}
 	
