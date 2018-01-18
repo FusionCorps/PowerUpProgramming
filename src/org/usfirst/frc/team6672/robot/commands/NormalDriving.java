@@ -1,9 +1,5 @@
 package org.usfirst.frc.team6672.robot.commands;
 
-
-/**
- *
- */
 public class NormalDriving extends CommandBase {
 
     public NormalDriving() {

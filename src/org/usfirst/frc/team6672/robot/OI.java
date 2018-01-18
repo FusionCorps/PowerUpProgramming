@@ -43,7 +43,7 @@ public class OI {
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
 	
-	Joystick stick = new Joystick(1);
+	Joystick stick = new Joystick(0);
 	Button button1 = new JoystickButton(stick, 1);
 	Button button2 = new JoystickButton(stick, 2);
 	Button button3 = new JoystickButton(stick, 3);
@@ -52,10 +52,10 @@ public class OI {
 	Button button6 = new JoystickButton(stick, 6);
 	Button button7 = new JoystickButton(stick, 7);
 	
-	Trigger autoGearOpen = new AutoGearOpen();
-	Trigger autoGearClose = new AutoGearClose();
-	Trigger manualGearOpen = new ManualGearOpen();
-	Trigger manualGearClose = new ManualGearClose();
+	Trigger autoGearOpen;
+	Trigger autoGearClose;
+	Trigger manualGearOpen;
+	Trigger manualGearClose;
 	
 	public double getStickAxis1(){
 		double stickAxis1 = stick.getRawAxis(1);
@@ -84,10 +84,15 @@ public class OI {
 	}
 	
 	public OI(){
-		autoGearOpen.whenActive(new OpenGearHolderOnce());
-		autoGearClose.whenActive(new CloseGearHolderOnce());
-		manualGearOpen.whileActive(new OpenGearHolderContinued());
-		manualGearClose.whileActive(new CloseGearHolderContinued());
+//		autoGearOpen = new AutoGearOpen();
+//		autoGearClose = new AutoGearClose();
+//		manualGearOpen = new ManualGearOpen();
+//		manualGearClose = new ManualGearClose();
+//		
+//		autoGearOpen.whenActive(new OpenGearHolderOnce());
+//		autoGearClose.whenActive(new CloseGearHolderOnce());
+//		manualGearOpen.whileActive(new OpenGearHolderContinued());
+//		manualGearClose.whileActive(new CloseGearHolderContinued());
 		button3.whenPressed(new RotateSpeed6());
 		button2.whenPressed(new RotateSpeed7());
 		button1.whenPressed(new RotateSpeed10());

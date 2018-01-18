@@ -26,8 +26,8 @@ public class DriveMechanism extends Subsystem {
 	DifferentialDrive robotDrive = new DifferentialDrive(lSpeedController, rSpeedController);
 	ADXRS450_Gyro myGyro = new ADXRS450_Gyro();
 	
-	double driveSpeed;
-	double rotateSpeed;
+	double driveSpeed = 0.6;
+	double rotateSpeed = 0.6;
 	
 	public void setDriveSpeed(double newDriveSpeed) {
 		driveSpeed = newDriveSpeed;

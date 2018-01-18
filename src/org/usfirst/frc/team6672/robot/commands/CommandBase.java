@@ -5,20 +5,21 @@ import org.usfirst.frc.team6672.robot.subsystems.DriveMechanism;
 import org.usfirst.frc.team6672.robot.subsystems.GearHolder;
 import org.usfirst.frc.team6672.robot.subsystems.RopeClimber;
 
+
 import edu.wpi.first.wpilibj.command.Command;
 
 public abstract class CommandBase extends Command {
 	
-	public static OI oi = new OI();
-	public static DriveMechanism driveMechanism;
-    public static GearHolder gearHolder;
-    public static RopeClimber ropeClimber;
+	public static OI oi;
+	public static DriveMechanism driveMechanism = new DriveMechanism();
+    public static GearHolder gearHolder = new GearHolder();
+    public static RopeClimber ropeClimber = new RopeClimber();
     
     
     public static void init() {
-    	driveMechanism = new DriveMechanism();
-    	gearHolder = new GearHolder();
-    	ropeClimber = new RopeClimber();
+    	System.out.println("Command Base initting");
+    	oi = new OI();
+    	System.out.println("Command Base initted");
     }
     
 }
